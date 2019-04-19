@@ -1,0 +1,99 @@
+﻿<Window x:Class="eSawmill_WPF.CreateCompanyWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:eSawmill_WPF"
+        mc:Ignorable="d"
+        Title="eSawmill - Tworzenie nowej firmy" Height="480" Width="544">
+
+    <StackPanel>
+        <TextBlock Margin="12" FontSize="24">Tworzenie nowej firmy</TextBlock>
+
+        <StackPanel Orientation="Horizontal" Margin="12">
+            <GroupBox Header="Dane firmy" Width="250">
+                <Grid Margin="6,12,6,6">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <TextBlock VerticalAlignment="Center">Nazwa firmy</TextBlock>
+                    <TextBlock VerticalAlignment="Center" Grid.Row="1">Imię</TextBlock>
+                    <TextBlock VerticalAlignment="Center" Grid.Row="2">Nazwisko</TextBlock>
+                    <TextBlock VerticalAlignment="Center" Grid.Row="3">NIP</TextBlock>
+                    <TextBlock VerticalAlignment="Center" Grid.Row="4">Regon</TextBlock>
+
+                    <TextBox Grid.Column="1" Grid.Row="0" Margin="2" x:Name="companyName" />
+                    <TextBox Grid.Column="1" Grid.Row="1" Margin="2" x:Name="ownerName" />
+                    <TextBox Grid.Column="1" Grid.Row="2" Margin="2" x:Name="ownerSurname" />
+                    <TextBox Grid.Column="1" Grid.Row="3" Margin="2" x:Name="nip" />
+                    <TextBox Grid.Column="1" Grid.Row="4" Margin="2" x:Name="regon" />
+                </Grid>
+            </GroupBox>
+
+            <GroupBox Header="Dane adresowe" Width="250" Margin="8,0,0,0">
+                <Grid Margin="6,12,6,6">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <TextBlock>Miejscowość</TextBlock>
+                    <TextBlock Grid.Row="1" VerticalAlignment="Center">Kod pocztowy</TextBlock>
+                    <TextBlock Grid.Row="2" VerticalAlignment="Center">Numer lokalu/domu</TextBlock>
+                    <TextBlock Grid.Row="3" VerticalAlignment="Center">Number telefonu</TextBlock>
+                    <TextBlock Grid.Row="4" VerticalAlignment="Center">Adres E-Mail</TextBlock>
+                    <TextBlock Grid.Row="5" VerticalAlignment="Center">Adres WWW</TextBlock>
+
+                    <TextBox Grid.Column="1" Grid.Row="0" x:Name="city" Margin="2" />
+                    <TextBox Grid.Column="1" Grid.Row="1" x:Name="zipCode" Margin="2" />
+                    <TextBox Grid.Column="1" Grid.Row="2" x:Name="homeNumber" Margin="2" />
+                    <TextBox Grid.Column="1" Grid.Row="3" x:Name="phoneNumber" Margin="2" />
+                    <TextBox Grid.Column="1" Grid.Row="4" x:Name="mail" Margin="2" />
+                    <TextBox Grid.Column="1" Grid.Row="5" x:Name="website" Margin="2" />
+                </Grid>
+            </GroupBox>
+        </StackPanel>
+
+        <TextBlock Margin="12,3,12, 0" FontSize="16">Konto programu eSawmill</TextBlock>
+        <Grid Margin="12">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <TextBlock VerticalAlignment="Center">Nazwa użytkownika</TextBlock>
+            <TextBlock Grid.Row="1" VerticalAlignment="Center">Hasło</TextBlock>
+            <TextBlock Grid.Row="2" VerticalAlignment="Center">Powtórz hasło</TextBlock>
+
+            <TextBox Grid.Column="1" x:Name="userName" Margin="2" />
+            <PasswordBox Grid.Column="1" Grid.Row="1" x:Name="password" Margin="2" />
+            <PasswordBox Grid.Column="1" Grid.Row="2" x:Name="passwordConfirm" Margin="2" />
+        </Grid>
+
+        <Button Margin="12" Padding="6" HorizontalAlignment="Right">Utwórz konto</Button>
+    </StackPanel>
+</Window>
